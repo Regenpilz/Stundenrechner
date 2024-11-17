@@ -36,7 +36,6 @@
     /* Container für das eingebettete Tool */
     .calckit-container {
       width: 100%;
-      max-width: 100%;
       padding: 10px;
       box-sizing: border-box;
       margin: 0 auto;
@@ -44,10 +43,12 @@
       justify-content: center; /* Zentriert das Tool */
     }
 
-    /* Keine Breitenänderung für das Tool */
+    /* Das eingebettete Tool */
     .calckit {
-      width: 100%; /* Das Tool passt sich an die Breite des Containers an */
-      max-width: 100%;
+      width: 100%;  /* Maximale Breite auf 100% setzen */
+      max-width: 100% !important; /* Verhindert breitere Darstellung als der Bildschirm */
+      height: auto; /* Verhindert Verformung */
+      overflow: hidden; /* Verhindert horizontalen Scrollbalken */
     }
   </style>
 </head>
